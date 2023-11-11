@@ -5,7 +5,7 @@
  */
 
 var createError = require('http-errors')
-var express = require('../../');
+var express = require('express');
 var app = module.exports = express();
 
 // Faux database

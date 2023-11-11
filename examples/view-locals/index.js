@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var express = require('../..');
+var express = require('express');
 var path = require('path');
 var User = require('./user');
 var app = express();
