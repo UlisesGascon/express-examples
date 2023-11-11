@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var express = require('../../');
+var express = require('express');
 var GithubView = require('./github-view');
 var md = require('marked').parse;
 

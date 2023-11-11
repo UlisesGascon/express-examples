@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var express = require('../..');
+var express = require('express');
 var path = require('path');
 var app = express();
 var logger = require('morgan');

@@ -5,7 +5,7 @@
  */
 
 var escapeHtml = require('escape-html');
-var express = require('../..');
+var express = require('express');
 var fs = require('fs');
 var marked = require('marked');
 var path = require('path');

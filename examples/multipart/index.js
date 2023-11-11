@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var express = require('../..');
+var express = require('express');
 var multiparty = require('multiparty');
 var format = require('util').format;
 

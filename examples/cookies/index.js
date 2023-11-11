@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var express = require('../../');
+var express = require('express');
 var app = module.exports = express();
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');

@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var express = require('../../lib/express');
+var express = require('express');
 
 var app = express();
 
