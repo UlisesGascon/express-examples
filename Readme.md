@@ -1,115 +1,64 @@
-[![Express Logo](https://i.cloudup.com/zfY6lL7eFa-3000x3000.png)](http://expressjs.com/)
+# Express examples
 
-  Fast, unopinionated, minimalist web framework for [Node.js](http://nodejs.org).
+This repository contains several examples using Express.
 
-  [![NPM Version][npm-version-image]][npm-url]
-  [![NPM Install Size][npm-install-size-image]][npm-install-size-url]
-  [![NPM Downloads][npm-downloads-image]][npm-downloads-url]
+- [auth](./examples/auth) - Authentication with login and password
+- [content-negotiation](./examples/content-negotiation) - HTTP content negotiation
+- [cookie-sessions](./examples/cookie-sessions) - Working with cookie-based sessions
+- [cookies](./examples/cookies) - Working with cookies
+- [downloads](./examples/downloads) - Transferring files to client
+- [ejs](./examples/ejs) - Working with Embedded JavaScript templating (ejs)
+- [error-pages](./examples/error-pages) - Creating error pages
+- [error](./examples/error) - Working with error middleware
+- [hello-world](./examples/hello-world) - Simple request handler
+- [markdown](./examples/markdown) - Markdown as template engine
+- [multi-router](./examples/multi-router) - Working with multiple Express routers
+- [multipart](./examples/multipart) - Accepting multipart-encoded forms
+- [mvc](./examples/mvc) - MVC-style controllers
+- [online](./examples/online) - Tracking online user activity with `online` and `redis` packages
+- [params](./examples/params) - Working with route parameters
+- [resource](./examples/resource) - Multiple HTTP operations on the same resource
+- [route-map](./examples/route-map) - Organizing routes using a map
+- [route-middleware](./examples/route-middleware) - Working with route middleware
+- [route-separation](./examples/route-separation) - Organizing routes per each resource
+- [search](./examples/search) - Search API
+- [session](./examples/session) - User sessions
+- [static-files](./examples/static-files) - Serving static files
+- [vhost](./examples/vhost) - Working with virtual hosts
+- [view-constructor](./examples/view-constructor) - Rendering views dynamically
+- [view-locals](./examples/view-locals) - Saving data in request object between middleware calls
+- [web-service](./examples/web-service) - Simple API service
 
-```js
-const express = require('express')
-const app = express()
 
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
+## Clone
 
-app.listen(3000)
+You can clone this repository using:
+
+```console
+$ git clone https://github.com/expressjs/examples
+$ cd examples
 ```
 
 ## Installation
 
-This is a [Node.js](https://nodejs.org/en/) module available through the
-[npm registry](https://www.npmjs.com/).
+:warning: Node.js 18.0 or higher is recommended.
 
-Before installing, [download and install Node.js](https://nodejs.org/en/download/).
-Node.js 0.10 or higher is required.
+[NVM](https://github.com/nvm-sh/nvm) is supported, so you can do:
 
-If this is a brand new project, make sure to create a `package.json` first with
-the [`npm init` command](https://docs.npmjs.com/creating-a-package-json-file).
+```console
+$ nvm install
+```
 
 Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```console
-$ npm install express
-```
-
-Follow [our installing guide](http://expressjs.com/en/starter/installing.html)
-for more information.
-
-## Features
-
-  * Robust routing
-  * Focus on high performance
-  * Super-high test coverage
-  * HTTP helpers (redirection, caching, etc)
-  * View system supporting 14+ template engines
-  * Content negotiation
-  * Executable for generating applications quickly
-
-## Docs & Community
-
-  * [Website and Documentation](http://expressjs.com/) - [[website repo](https://github.com/expressjs/expressjs.com)]
-  * [#express](https://web.libera.chat/#express) on [Libera Chat](https://libera.chat) IRC
-  * [GitHub Organization](https://github.com/expressjs) for Official Middleware & Modules
-  * Visit the [Wiki](https://github.com/expressjs/express/wiki)
-  * [Google Group](https://groups.google.com/group/express-js) for discussion
-  * [Gitter](https://gitter.im/expressjs/express) for support and discussion
-
-**PROTIP** Be sure to read [Migrating from 3.x to 4.x](https://github.com/expressjs/express/wiki/Migrating-from-3.x-to-4.x) as well as [New features in 4.x](https://github.com/expressjs/express/wiki/New-features-in-4.x).
-
-## Quick Start
-
-  The quickest way to get started with express is to utilize the executable [`express(1)`](https://github.com/expressjs/generator) to generate an application as shown below:
-
-  Install the executable. The executable's major version will match Express's:
-
-```console
-$ npm install -g express-generator@4
-```
-
-  Create the app:
-
-```console
-$ express /tmp/foo && cd /tmp/foo
-```
-
-  Install dependencies:
-
-```console
 $ npm install
 ```
 
-  Start the server:
+### Running examples
 
-```console
-$ npm start
-```
-
-  View the website at: http://localhost:3000
-
-## Philosophy
-
-  The Express philosophy is to provide small, robust tooling for HTTP servers, making
-  it a great solution for single page applications, websites, hybrids, or public
-  HTTP APIs.
-
-  Express does not force you to use any specific ORM or template engine. With support for over
-  14 template engines via [Consolidate.js](https://github.com/tj/consolidate.js),
-  you can quickly craft your perfect framework.
-
-## Examples
-
-  To view the examples, clone the Express repo and install the dependencies:
-
-```console
-$ git clone https://github.com/expressjs/express.git --depth 1
-$ cd express
-$ npm install
-```
-
-  Then run whichever example you want:
+Whichever example you want:
 
 ```console
 $ node examples/content-negotiation
@@ -117,19 +66,17 @@ $ node examples/content-negotiation
 
 ## Contributing
 
-  [![Linux Build][github-actions-ci-image]][github-actions-ci-url]
-  [![Windows Build][appveyor-image]][appveyor-url]
-  [![Test Coverage][coveralls-image]][coveralls-url]
-
 The Express.js project welcomes all constructive contributions. Contributions take many forms,
 from code for bug fixes and enhancements, to additions and fixes to documentation, additional
 tests, triaging incoming pull requests and issues, and more!
 
-See the [Contributing Guide](Contributing.md) for more technical details on contributing.
+See the [Contributing Guide](https://github.com/expressjs/express/blob/master/Contributing.md) for more technical details on contributing.
+
+See the [Code of Conduct](https://github.com/expressjs/express/blob/master/Code-Of-Conduct.md) for a description of the standards we adhere to.
 
 ### Security Issues
 
-If you discover a security vulnerability in Express, please see [Security Policies and Procedures](Security.md).
+If you discover a security vulnerability in Express, please see [Security Policies and Procedures](https://github.com/expressjs/express/blob/master/Security.md).
 
 ### Running Tests
 
@@ -146,21 +93,8 @@ The original author of Express is [TJ Holowaychuk](https://github.com/tj)
 
 The current lead maintainer is [Douglas Christopher Wilson](https://github.com/dougwilson)
 
-[List of all contributors](https://github.com/expressjs/express/graphs/contributors)
+[List of all contributors](https://github.com/expressjs/examples/graphs/contributors)
 
 ## License
 
-  [MIT](LICENSE)
-
-[appveyor-image]: https://badgen.net/appveyor/ci/dougwilson/express/master?label=windows
-[appveyor-url]: https://ci.appveyor.com/project/dougwilson/express
-[coveralls-image]: https://badgen.net/coveralls/c/github/expressjs/express/master
-[coveralls-url]: https://coveralls.io/r/expressjs/express?branch=master
-[github-actions-ci-image]: https://badgen.net/github/checks/expressjs/express/master?label=linux
-[github-actions-ci-url]: https://github.com/expressjs/express/actions/workflows/ci.yml
-[npm-downloads-image]: https://badgen.net/npm/dm/express
-[npm-downloads-url]: https://npmcharts.com/compare/express?minimal=true
-[npm-install-size-image]: https://badgen.net/packagephobia/install/express
-[npm-install-size-url]: https://packagephobia.com/result?p=express
-[npm-url]: https://npmjs.org/package/express
-[npm-version-image]: https://badgen.net/npm/v/express
+[MIT](LICENSE)
