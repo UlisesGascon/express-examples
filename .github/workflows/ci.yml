@@ -1,8 +1,10 @@
 name: ci
 
 on:
-- pull_request
-- push
+  pull_request:
+  push:
+  repository_dispatch:
+    types: [integration-tests]
 
 jobs:
   test:
@@ -30,8 +32,15 @@ jobs:
           node-version: "21.1"
 
     steps:
+    - name: Set EXPRESS_BRANCH_NAME
+      run: echo "EXPRESS_BRANCH_NAME=${{ github.event.client_payload.branch || 'master' }}" >> $GITHUB_ENV
+
     - uses: actions/checkout@v3
 
+    - name: Replace Expressjs branch name in package.json
+      run: |
+        jq '.dependencies.express = "git+https://github.com/expressjs/express.git#'${EXPRESS_BRANCH_NAME}'"' package.json > temp.json && mv temp.json package.json
+    
     - name: Install Node.js ${{ matrix.node-version }}
       shell: bash -eo pipefail -l {0}
       run: |
